@@ -6,9 +6,11 @@ def main():
     
     try:
         t.temperatura = 16
-        print(f'Sucesso! {t.ftemperatura}') 
     except ValueError as ex:
         print(f'Erro capturado! {ex}')   
+        
+    print(f'Temperatura atual é de {t.ftemperatura}') 
+
 
 if __name__ == "__main__":
     main()
