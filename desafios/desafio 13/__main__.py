@@ -5,7 +5,7 @@ def main():
     t = Termostato()
     
     try:
-        t.temperatura = 30
+        t.temperatura = 16
         print(f'Sucesso! {t.ftemperatura}') 
     except ValueError as ex:
         print(f'Erro capturado! {ex}')   
