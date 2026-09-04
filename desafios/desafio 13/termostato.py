@@ -11,12 +11,15 @@ class Termostato:
 
     @temperatura.setter
     def temperatura(self, valor):
-        if valor <= 15 or valor > 30:
-            raise ValueError('Temperatura invalida! Minimo é 16 graus e Maximo é 30 graus!')
-        if not valor % 1 == 0.5:
+        if not valor % 1 == 0.5 or not valor > 16 or not valor < 30:
             raise ValueError('Temperatura invalida! Seu valor deve terminar inteiro ou com .5!')
-        self.__temperatura = valor
-    
+        if valor < 16:
+            self.__temperatura = 16
+        elif valor > 30:
+            self.__temperatura = 30
+        else:
+            self.__temperatura = valor
+        
     @property
     def ftemperatura(self):
         return f'{self.__temperatura}°C'
