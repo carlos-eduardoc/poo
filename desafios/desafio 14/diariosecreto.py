@@ -43,4 +43,10 @@ class DiarioSecreto:
 
     @senha.setter
     def senha(self, valor):
-        self.__senha = valor
+        senha = self.pede_senha()
+        validacao = self.valida_senha(senha)
+        
+        if validacao == True:
+            self.__senha = valor
+        else:
+            raise PermissionError('Senha atual está incorreta! Não foi possivel modificar a senha!')
