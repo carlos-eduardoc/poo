@@ -32,6 +32,10 @@ class Aluno(Pessoa):
 
     
     def add_curso(self, curso:str):
+        curso = curso.strip().upper()
+        
+        if curso in self.cursos_oficiais:
+            raise ValueError('O curso já está na lista oficial!')
         if len(curso) <= 5 and len(curso) > 1:
             self.cursos_oficiais.append(curso.upper())
         else:
