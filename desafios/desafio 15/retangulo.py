@@ -32,9 +32,10 @@ class Retangulo:
     
     @medidas.setter
     def medidas(self, valores:tuple):
-        if len(valores) > 2:
-            raise ValueError('Digite apenas 2 itens!')
-        
+        if not isinstance(valores, tuple):
+            raise TypeError('Os valores devem ser informados obrigatoriamente')
+        if len(valores) != 2:
+            raise ValueError('Digite base e altura!')
         self._base = valores[0]
         self._altura = valores[1]
         
