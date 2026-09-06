@@ -13,10 +13,5 @@ def main():
     
     inspect(aluno, private=True, methods=True)
 
-    
-    
-    
-    
-        
 if __name__ == '__main__':
     main()
