@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
-
+import datetime
 class Pessoa(ABC):
-    ano = 2026
+    ano = datetime.datetime.today().year
     
-    def __init__(self, nome:str, nascimento:int):
+    def __init__(self, nome:str, nascimento:int=1940):
         super().__init__()
         self._nome = nome
         self._nascimento = nascimento
@@ -15,7 +15,7 @@ class Pessoa(ABC):
 
     @nascimento.setter
     def nascimento(self, valor):
-        if valor > 2026 or valor < 1940:
+        if valor > Pessoa.ano or valor < 1940:
             raise ValueError('Ano Invalido!')
         self._nascimento = valor
     
