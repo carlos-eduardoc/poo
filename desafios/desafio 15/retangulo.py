@@ -34,12 +34,10 @@ class Retangulo:
     def medidas(self, valores:tuple):
         if len(valores) > 2:
             raise ValueError('Digite apenas 2 itens!')
-        if self._base == 0 and self._altura == 0:
-            self._base = valores[0]
-            self._altura = valores[1]
-        else:
-            raise ValueError('Já existem valores existentes nos atributos!')
-    
+        
+        self._base = valores[0]
+        self._altura = valores[1]
+        
     
     @property
     def area(self):
