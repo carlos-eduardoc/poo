@@ -7,6 +7,6 @@ class ContaPoupanca(Conta):
         
     def saque(self, valor):
         validacao = self.validador_saque(valor)
-        if validacao == True:
+        if validacao:
             self._saldo -= valor
             print(f'Saque realizado! -{valor:,.2f} ')
