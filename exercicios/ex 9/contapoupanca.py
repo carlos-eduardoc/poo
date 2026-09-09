@@ -9,4 +9,4 @@ class ContaPoupanca(Conta):
         validacao = self.validador_saque(valor)
         if validacao:
             self._saldo -= valor
-            print(f'Saque realizado! -{valor:,.2f} ')
+            print(f'Saque realizado! -R${valor:,.2f} ')
