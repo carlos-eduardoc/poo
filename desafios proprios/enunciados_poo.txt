@@ -1,0 +1,240 @@
+DESAFIOS DE PROGRAMAÇÃO ORIENTADA A OBJETOS (POO)
+
+Em todos os desafios, pratique classes, atributos, instâncias, self,
+métodos e métodos especiais (dunder methods) quando forem solicitados.
+
+============================================================
+FÁCIL
+============================================================
+
+1. Retângulo (sem estrutura de dados)
+
+Crie uma classe Retangulo com os atributos largura e altura.
+
+Implemente métodos para calcular a área e o perímetro. Faça o método
+__str__ exibir uma mensagem semelhante a: "Retângulo 5 x 3".
+
+Pilar em foco: ABSTRAÇÃO. Modele um retângulo real como um objeto com
+dados e comportamentos.
+
+
+2. Lista de tarefas (com estrutura de dados)
+
+
+Crie uma classe ListaDeTarefas que armazene dicionários de tarefas em uma
+lista. Ela deve permitir adicionar uma tarefa, concluí-la pelo título e
+listar todas, indicando quais foram concluídas.
+
+Pilar em foco: ABSTRAÇÃO e ENCAPSULAMENTO inicial. A classe controla o
+acesso à lista; o programa não precisa mexer nela diretamente.
+
+============================================================
+MÉDIO
+============================================================
+
+3. Conta bancária (sem estrutura de dados)
+
+Crie uma classe ContaBancaria com os atributos titular, saldo, limite e
+numero.
+
+Implemente os métodos depositar, sacar e transferir. Não permita que o
+saldo fique abaixo do limite. Use __str__ para exibir os dados da conta e
+__eq__ para considerar duas contas iguais quando possuírem o mesmo titular
+e número.
+
+Pilar em foco: ENCAPSULAMENTO inicial. Os métodos são responsáveis por
+alterar o saldo, em vez de mudar esse atributo em qualquer lugar.
+
+
+4. Biblioteca (com estrutura de dados)
+
+Crie as classes Livro e Biblioteca.
+
+Cada livro deve ter título, autor e disponibilidade. A biblioteca deve
+armazenar livros em uma lista e permitir: cadastrar livros, emprestá-los,
+devolvê-los e buscá-los pelo título. Um livro indisponível não pode ser
+emprestado novamente.
+
+Pilar em foco: ABSTRAÇÃO e ENCAPSULAMENTO inicial. Livro representa os
+dados; Biblioteca controla as regras de empréstimo e devolução.
+
+============================================================
+DIFÍCIL
+============================================================
+
+5. Jogo de batalha (sem estrutura de dados)
+
+Crie uma classe base Personagem com nome, vida, ataque e defesa. Crie
+subclasses como Guerreiro e Mago, cada uma com uma habilidade própria.
+
+Implemente um combate entre dois personagens em turnos. O dano deve ser
+de pelo menos 1 e o programa deve informar o vencedor. Use __repr__ para
+uma representação útil dos personagens durante os testes.
+
+Pilar em foco: HERANÇA. Guerreiro e Mago reutilizam os atributos e métodos
+de Personagem e adicionam comportamentos próprios.
+
+
+6. Carrinho de compras (com estrutura de dados)
+
+Crie as classes Produto, ItemCarrinho e Carrinho.
+
+O carrinho deve armazenar itens em um dicionário no formato
+{produto: quantidade}, ou em uma lista de objetos ItemCarrinho. Implemente
+adicionar, remover, calcular subtotal, aplicar desconto percentual e obter
+o total final. A quantidade de um item nunca pode ser negativa.
+
+Pilar em foco: ABSTRAÇÃO e ENCAPSULAMENTO. Carrinho é responsável por
+proteger as regras de quantidade, desconto e total.
+
+============================================================
+IMPOSSÍVEL
+============================================================
+
+7. Sistema de arquivos em memória (sem estrutura de dados)
+
+Modele as classes Arquivo e Pasta. Cada Pasta deve conhecer sua pasta pai
+e deve conseguir gerar seu caminho completo, por exemplo:
+/projetos/python/aula.py
+
+Implemente mover e renomear arquivos e pastas. Bloqueie ações inválidas,
+como mover uma pasta para dentro dela mesma. Use __str__ e propriedades
+com @property quando fizer sentido.
+
+Pilar em foco: ABSTRAÇÃO, ENCAPSULAMENTO e COMPOSIÇÃO. Pastas possuem
+arquivos e outras pastas; as regras impedem estados inválidos.
+
+
+8. Rede social simplificada (com estrutura de dados)
+
+Crie as classes Usuario e RedeSocial.
+
+A rede deve armazenar usuários em um dicionário e relações de amizade ou
+seguidores usando set. Implemente cadastro, seguir, deixar de seguir,
+publicar posts, mostrar um feed com posts das pessoas seguidas e sugerir
+pessoas para seguir com base em amigos em comum. Não permita que um
+usuário siga a si mesmo nem que existam relações duplicadas.
+
+Pilar em foco: ABSTRAÇÃO e ENCAPSULAMENTO. A rede social controla relações
+entre usuários e protege suas regras.
+
+DESAFIO EXTRA:
+Para cada exercício, crie um arquivo de testes com exemplos de ações
+válidas e inválidas.
+
+============================================================
+EXERCÍCIO EXTRA FINAL — EVOLUÇÃO DO JOGO DE BATALHA
+============================================================
+
+Evolua o desafio 5 criando uma classe Duelo (ou Batalha) para controlar
+uma luta entre dois personagens.
+
+Cada rodada possui dois turnos: um turno para cada personagem. Em seu
+turno, o personagem pode atacar, defender ou tentar correr.
+
+- Atacar: aplica a regra de dano do desafio 5.
+- Defender: cria uma regra temporária de defesa, como aumentar a defesa
+  por um turno ou reduzir o próximo dano recebido.
+- Correr: tem uma chance de sucesso. Se funcionar, o duelo termina sem
+  vencedor; se falhar, o adversário recebe o próximo turno.
+
+A classe Duelo deve guardar os dois personagens, controlar de quem é o
+turno e informar se houve vencedor, morte ou fuga. Primeiro defina as
+regras do jogo em texto e, depois, implemente-as.
+
+Pilares em foco: HERANÇA, ABSTRAÇÃO e POLIMORFISMO. A classe Duelo trata
+os combatentes de forma geral, mesmo que sejam subclasses diferentes.
+
+============================================================
+TRILHA COMPLEMENTAR — ALINHADA AO CURSO EM VÍDEO, MUNDO 4
+============================================================
+
+9. Sistema de produtos
+
+Crie a classe Produto com nome, preço e quantidade em estoque. Crie
+métodos para repor, vender e mostrar o valor total armazenado. Não deixe
+vender mais itens do que há no estoque.
+
+Pilar em foco: ABSTRAÇÃO e ENCAPSULAMENTO inicial.
+
+
+10. Analisador de churrasco
+
+Crie uma classe Churrasco com quantidade de adultos, crianças e carne
+por pessoa. O método calcular_carne() deve retornar quantos quilos de
+carne comprar. Crianças contam como meia porção.
+
+Pilar em foco: ABSTRAÇÃO. Transforme uma situação do dia a dia em objeto.
+
+
+11. Livro com limite de páginas
+
+Crie uma classe Livro com título, autor e páginas. A quantidade de
+páginas não pode ser menor que 1. Primeiro valide no construtor; depois,
+em uma segunda versão, use @property e setter para proteger alterações.
+
+Pilar em foco: ENCAPSULAMENTO.
+
+
+12. Coleção gamer
+
+Crie uma classe Jogo e uma classe Gamer. Gamer guarda uma lista de jogos
+favoritos e deve adicionar, remover e listar jogos sem duplicá-los.
+
+Pilar em foco: ABSTRAÇÃO e ENCAPSULAMENTO. Relação de agregação: um Gamer
+possui jogos, mas os jogos podem existir sem ele.
+
+
+13. Caneta colorida
+
+Crie uma classe Caneta com cor, carga e tampada. Ela deve escrever,
+tampar e destampar. Não deve escrever se estiver tampada ou sem carga.
+
+Pilar em foco: ABSTRAÇÃO e ENCAPSULAMENTO inicial.
+
+
+14. Controle remoto
+
+Crie uma classe ControleRemoto com volume, ligado e mudo. Implemente
+ligar, desligar, aumentar/diminuir volume, ativar/desativar mudo e abrir
+um menu com o estado atual. Mantenha o volume entre 0 e 100.
+
+Pilar em foco: ENCAPSULAMENTO. Os métodos protegem as regras do estado.
+
+
+15. Polígonos
+
+Crie uma classe base Poligono com um método calcular_area(). Crie as
+subclasses Quadrado, Retangulo e Triangulo; cada uma calcula sua área de
+forma diferente. Faça uma lista de polígonos e calcule todas as áreas.
+
+Pilares em foco: HERANÇA e POLIMORFISMO. O mesmo método possui uma
+implementação diferente em cada tipo de polígono.
+
+
+16. Máquina de café
+
+Crie classes Bebida e MaquinaDeCafe. A máquina guarda água, café, leite e
+dinheiro. Ela deve listar bebidas, preparar uma bebida se houver
+ingredientes e cobrar o valor correto.
+
+Pilares em foco: ABSTRAÇÃO, ENCAPSULAMENTO e COMPOSIÇÃO.
+
+
+17. Sistema de frete
+
+Crie uma classe base Entrega com origem, destino e peso. Crie subclasses
+EntregaNormal e EntregaExpressa, cada uma com sua própria regra de cálculo
+de frete. Mostre o preço de uma lista com entregas variadas.
+
+Pilares em foco: HERANÇA e POLIMORFISMO.
+
+
+18. Termostato inteligente
+
+Crie uma classe Termostato com temperatura desejada e temperatura atual.
+Use @property para não permitir temperatura desejada fora do intervalo de
+10 a 30 graus. Crie um método ajustar() que informe se deve aquecer,
+resfriar ou manter o ambiente.
+
+Pilar em foco: ENCAPSULAMENTO com @property e setter.
