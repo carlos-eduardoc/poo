@@ -10,17 +10,22 @@ def main():
         contap.saque(2000)
     except Exception as ex:
         print(ex)
+    
+    try:
+        contap.saque(200)
+    except Exception as ex:
+        print(ex)       
         
     print(contap.saldo)
     inspect(contap, private=True, methods=True)
     
     contac = ContaCorrente(2000)
     try:
-        contac.saque(2000)
+        contac.saque(1900)
     except Exception as ex:
         print(ex)
         
-    print(contap.saldo)
+    print(contac.saldo)
     inspect(contac, private=True, methods=True)
 
 if __name__ == '__main__':
