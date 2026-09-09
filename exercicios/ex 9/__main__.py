@@ -16,7 +16,7 @@ def main():
     except Exception as ex:
         print(ex)       
         
-    print(contap.saldo)
+    print(f'Saldo: R${contap.saldo:,.2f}')
     inspect(contap, private=True, methods=True)
     
     contac = ContaCorrente(2000)
@@ -25,7 +25,7 @@ def main():
     except Exception as ex:
         print(ex)
         
-    print(contac.saldo)
+    print(f'Saldo: R${contac.saldo:,.2f}')
     inspect(contac, private=True, methods=True)
 
 if __name__ == '__main__':
