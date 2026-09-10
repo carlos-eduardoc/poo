@@ -12,8 +12,6 @@ class ContaCorrente(Conta):
         saldo_apos_contas = self._saldo - ContaCorrente.taxa_fixa - valor
         if valor < 1:
             raise ValueError('Não foi possivel realizar o saque, o valor é menor que R$1,00')
-        elif saldo_apos_contas > self._saldo:
-            raise ValueError('Não foi possivel realizar o saque, valor + taxa é maior que seu saldo!')
         elif saldo_apos_contas <= 0:
             raise ValueError('Não foi possivel realizar o saque, valor + taxa é menor ou igual que R$0.00!')
         else:
