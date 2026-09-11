@@ -1,0 +1,8 @@
+Vetor2D com subtração e multiplicação escalar
+
+Crie uma classe Vetor2D com atributos x e y.
+
+Sobrescreva __add__ (soma de vetores, como você já fez com Ponto2D).
+Sobrescreva __sub__ para v1 - v2 retornar um novo Vetor2D com a subtração das coordenadas.
+Sobrescreva __mul__ para v1 * 3 (vetor vezes um número)
+ retornar um novo Vetor2D com cada coordenada multiplicada pelo número.
