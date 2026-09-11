@@ -1,3 +1,0 @@
-implemente uma classe Biblioteca que armazena uma lista de nomes
-de livros. Sobrescreva o operador __add__ para permitir adicionar um novo livro à biblioteca
-usando biblioteca + "Nome do Livro" e o método __len__ para retornar o total de livros.
