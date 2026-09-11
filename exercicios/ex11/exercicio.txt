@@ -1,0 +1,9 @@
+Geometria Espacial (Operadores) — Implemente uma classe Ponto2D com atributos x e y.
+
+Sobrescreva __add__ para que p1 + p2 retorne um novo Ponto2D com a soma das coordenadas.
+Sobrescreva __eq__ para permitir comparar se dois pontos ocupam a mesma posição no plano.
+
+Repara numa diferença importante em relação ao exercício da Biblioteca: aqui o __add__ 
+não deve retornar self — ele deve criar e retornar um Ponto2D novo,
+sem alterar p1 nem p2 originais. Pensa em por que isso faz mais sentido geometricamente
+(somar dois pontos não deveria "destruir" nenhum dos dois, só gerar um terceiro ponto resultante).
