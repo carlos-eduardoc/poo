@@ -1,7 +1,9 @@
 from biblioteca import Biblioteca
 
 def main():
-    b1 = Biblioteca()
+    biblioteca = Biblioteca()
+    biblioteca + 'Harry Poter'
+    print(len(biblioteca))
 
 if __name__ == '__main__':
     main()
