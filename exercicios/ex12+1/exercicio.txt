@@ -1,0 +1,7 @@
+Comparações de tamanho com __lt__ e __gt__
+
+Crie uma classe Retangulo com atributos largura e altura.
+
+Adicione um método area(self) que retorna largura * altura.
+Sobrescreva __lt__ (menor que) para que r1 < r2 compare se a área de r1 é menor que a de r2.
+Sobrescreva __gt__ (maior que) da mesma forma, para área maior.
