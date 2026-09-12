@@ -1,0 +1,6 @@
+Crie uma classe Formatador com um método @singledispatchmethod chamado formatar(self, valor):
+
+Se valor for int, retorna a string formatada com separador de milhar (ex: 1000 → "1.000").
+Se valor for str, retorna a string em maiúsculas.
+Se valor for list, retorna quantos itens ela tem, no formato "Lista com N itens".
+Registre cada tipo com @formatar.register(...).
