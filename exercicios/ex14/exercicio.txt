@@ -1,0 +1,14 @@
+__str__ junto com outro operador
+
+Crie uma classe Fracao com atributos numerador e denominador.
+
+Sobrescreva __add__ para somar duas frações sem simplificar, usando a fórmula: (n1*d2 + n2*d1) / (d1*d2).
+Sobrescreva __str__ para que print(fracao) mostre no formato "numerador/denominador".
+
+Pensa em como aplicar a fórmula da soma de frações (a que você aprendeu na escola: tirar denominador
+ comum multiplicando cruzado):
+
+Se f1 = numerador1/denominador1 e f2 = numerador2/denominador2, o resultado da soma é:
+
+novo numerador = numerador1 * denominador2 + numerador2 * denominador1
+novo denominador = denominador1 * denominador2
