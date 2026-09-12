@@ -3,14 +3,14 @@ class Retangulo:
         self.largura = largura
         self.altura = altura
     
-    
     def area(self):
-        pass
+        area = self.largura * self.altura
+        return area
     
     
     def __lt__(self, outro):
-        pass
+        return self.area() < outro.area()
 
     
     def __gt__(self, outro):
-        pass
+        return self.area() > outro.area()
