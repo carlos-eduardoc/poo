@@ -8,7 +8,7 @@ class Formatador:
     
     @formatar.register(int)
     def _(self, valor):
-        return f'{valor:,.2f}'
+        return f'{valor:,.2f}'.replace(',', '.')
 
     
     @formatar.register(str)
