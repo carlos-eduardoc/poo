@@ -1,0 +1,5 @@
+Crie uma classe Calculadora com um método @singledispatchmethod chamado dobrar(self, valor):
+
+Se valor for int ou float, retorna o valor multiplicado por 2.
+Se valor for str, retorna a string repetida duas vezes (concatenada).
+Se valor for list, retorna a lista concatenada com ela mesma (união, dobrando os itens).
