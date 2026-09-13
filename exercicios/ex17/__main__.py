@@ -5,7 +5,9 @@ from radio import Radio
 
 
 def main():
-    ...
+    objetos = [Motor(), Lampada(), Radio(), 'oi']
+    for obj in objetos:
+        ativar_dispositivo(obj)
     
 
 if __name__ == '__main__':
