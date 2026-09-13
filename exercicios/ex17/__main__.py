@@ -1,11 +1,8 @@
-from ducktyping import ativar_dispositivo
-from motor import Motor
-from lampada import Lampada
-from radio import Radio
-
+from servicos.ducktyping import ativar_dispositivo
+from dispositivos import motor, lampada, radio
 
 def main():
-    objetos = [Motor(), Lampada(), Radio(), 'oi']
+    objetos = [motor.Motor(), lampada.Lampada(), radio.Radio(), 'oi']
     for obj in objetos:
         ativar_dispositivo(obj)
     
