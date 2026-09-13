@@ -1,0 +1,3 @@
+crie três classes: Radio, Lampada e Motor. Cada uma deve ter um
+método ligar(). Implemente uma função ativar_dispositivo(obj) que use Duck Typing
+com try/except para acionar o método de qualquer um deles.
